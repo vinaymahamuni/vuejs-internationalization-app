@@ -1,5 +1,8 @@
 # vuejs-internationalization-app
 
+This project demonstrates how to use vue-i18n library to 
+add internationalization feature to your application.
+
 ## Project setup
 ```
 npm install
@@ -9,16 +12,3 @@ npm install
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
