@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" :dir="direction">
         <img alt="Vue logo" src="./assets/logo.png">
         <LanguageSelector/>
         <HelloWorld :msg="$t('helloWorld')"/>
@@ -9,7 +9,7 @@
 <script>
   import HelloWorld from './components/HelloWorld.vue';
   import LanguageSelector from './components/LanguageSelector.vue';
-  import {i18n} from './i18n';
+  import {i18n, LayoutDirectionConfig} from './i18n';
 
   export default {
     name: 'app',
@@ -17,6 +17,14 @@
     components: {
       HelloWorld,
       LanguageSelector
+    },
+    data() {
+      return {
+        direction: 'ltr'
+      };
+    },
+    updated() {
+      this.direction = LayoutDirectionConfig[this.$i18n.locale];
     }
   };
 </script>
